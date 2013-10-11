@@ -13,10 +13,10 @@ setup(
     long_description=open('README.md').read(),
     zip_safe=False,
     install_requires=[
-        'WTForms==1.0.2',
-        'requests==1.1.0',
-        'nose==1.2.1',
-        'querystring-parser',
+        'WTForms==1.0.5',
+        'requests==2.0.0',
+        'nose==1.3.0',
+        'querystring-parser==1.1',
         'mocktest'
      ]
 )

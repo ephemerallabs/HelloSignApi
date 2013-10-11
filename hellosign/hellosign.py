@@ -29,7 +29,7 @@ class HelloSignSignature(HelloSign):
             self.signers.append(signer)
         else:
             if not signer.validate():
-                raise Exception("HelloSigner Errors %s" % (signers.errors,))
+                raise Exception("HelloSigner Errors %s" % (signer.errors,))
             else:
                 raise Exception("add_signer signer must be an instance of class HelloSigner")
 
