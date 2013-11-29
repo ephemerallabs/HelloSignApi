@@ -53,10 +53,6 @@ class HelloSignSignature(HelloSign):
         data = {}
 
         for i, signer in enumerate(self.signers):
-            if signer.data['role']:
-                data['signers[%s][name]' % (signer.data['role'],)] = signer.data['name']
-                data['signers[%s][email_address]' % (signer.data['role'],)] = signer.data['email']
-            else:
                 data['signers[%d][name]' % (i,)] = signer.data['name']
                 data['signers[%d][email_address]' % (i,)] = signer.data['email']
 
