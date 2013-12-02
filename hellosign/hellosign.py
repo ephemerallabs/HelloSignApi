@@ -62,14 +62,12 @@ class HelloSignSignature(HelloSign):
         return data
 
     def files(self):
-        files = {
-            'file': ()
-        }
+        files = []
 
         for i,doc in enumerate(self.docs):
             path = doc.data['file_path']
 
-            files['file'] = open(path, 'rb')
+            files.append(('%d' % i, open(path, 'rb'),))
 
         return files
 
